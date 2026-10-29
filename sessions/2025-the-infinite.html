@@ -80,6 +80,15 @@
   <p class="label">Performance</p>
   <h2>The bells of PAF</h2>
   <p>A performance with the bells of the PAF chapel by Julian Rohrhuber and Manuel Eguía.</p>
+  <video class="film" controls preload="none" playsinline poster="../video/bells/poster.jpg" data-src="../video/bells/index.m3u8" aria-label="Film of the bells performance (31 min)"></video>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.13/dist/hls.min.js"></script>
+  <script>
+  document.querySelectorAll('video.film').forEach(function (v) {
+    var src = v.dataset.src;
+    if (v.canPlayType('application/vnd.apple.mpegurl')) { v.src = src; }
+    else if (window.Hls && Hls.isSupported()) { var h = new Hls(); h.loadSource(src); h.attachMedia(v); }
+  });
+  </script>
 <div class="photos four">
   <a href="../images/2025/bells-1.jpg"><img src="../images/2025/bells-1.jpg" alt="A bell of the PAF chapel" loading="lazy"></a>
   <a href="../images/2025/bells-2.jpg"><img src="../images/2025/bells-2.jpg" alt="Bell and ropes in the tower" loading="lazy"></a>
